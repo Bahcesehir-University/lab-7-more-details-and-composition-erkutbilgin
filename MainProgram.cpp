@@ -44,10 +44,10 @@ public:
         : topLeft(x1,y1), bottomRight(x2,y2) {}  // stub — fix initializer
 
     // TODO 7: const getWidth()
-    double getWidth() const { return abs(topLeft.getX() - bottomRight.getX()); }  // stub
+    double getWidth() const { return std::abs(topLeft.x - bottomRight.x); }  // stub
 
     // TODO 8: const getHeight()
-    double getHeight() const { return abs(topLeft.getY() - bottomRight.getY()); }  // stub
+    double getHeight() const { return std::abs(topLeft.y- bottomRight.y); }  // stub
 
     // TODO 9: const getArea()
     double getArea() const { return this->getWidth() * this->getHeight() ; }  // stub
@@ -83,7 +83,7 @@ public:
     void doubleValue() {value *= 2;}  // stub
 
     // TODO 16: const constGetDouble() — returns value * 2 without modifying
-    int constGetDouble(const int value)  { return value*2; }  // stub — add const + fix body
+    int constGetDouble(const int &value)  { return value*2; }  // stub — add const + fix body
 };
 
 
