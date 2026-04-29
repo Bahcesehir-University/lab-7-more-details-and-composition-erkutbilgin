@@ -27,7 +27,7 @@ public:
     double getY() const { return y; }   // stub — add const
 
     // TODO 4: const display()
-    void display() const { std::cout << "(?, ?)"; }
+    void display() const { std::cout << "("<<x<< ", "<<y<<")"; }
 
     // TODO 5: declare Rectangle as friend class
     friend class Rectangle;
@@ -53,7 +53,10 @@ public:
     double getArea() const { return this->getWidth() * this->getHeight() ; }  // stub
 
     // TODO 10: const display()
-    void display() const {}
+    void display() const { 
+        topLeft.display();
+        bottomRight.display();
+    }
 
     // TODO 11: declare isSameSize as friend function
     friend bool isSameSize(const Rectangle& r1, const Rectangle& r2);
